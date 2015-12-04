@@ -11,11 +11,18 @@ package carddeck;
  */
 public class CardDeck {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args)  //Creates a deck, shuffles, and then deals.
+    {
+        Deck deck = new Deck();
+
+        deck.shuffle();
+        
+        int cardNumber = 0;
+        while (deck.hasMoreCards())
+        {
+            System.out.println("  " + ++cardNumber + ": " + deck.deal());
+        }      
+        
+        
     }
-    
 }
